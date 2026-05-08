@@ -1,3 +1,5 @@
+import java.time.LocalTime;
+
 public class Employee {
     private int employeeID;
     private String name;
@@ -13,8 +15,9 @@ public class Employee {
         }
         private double getOvertimeHours(){
         if(hoursWorked > 40) {
-
+           double price = getTotalPay() * 1.1;
         }
+        return 0;
         }
 
     public int getEmployeeID() {
@@ -64,4 +67,9 @@ public class Employee {
         this.payRate = payRate;
         this.hoursWorked = hoursWorked;
     }
+    public void punchIn() {
+        LocalTime time = LocalTime.now();
+
+    }
+
 }
